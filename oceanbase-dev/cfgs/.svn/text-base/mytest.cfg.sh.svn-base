@@ -1,0 +1,17 @@
+## rpm build variables
+##
+## 
+export OB_NAME=ob1
+export MYSQLTEST_DIR=$SRC_DIR/tools/deploy/mysql_test/java
+export MYTEST_JAR_URL="http://10.232.4.35:8877/mytest-1.2-SNAPSHOT-jar-with-dependencies.jar"
+#export OB_DEFINE="OBI(masters=['10.232.23.15','10.232.23.16'], slaves=['10.232.23.15','10.232.23.16','10.232.23.17'],app_name='collect', tpl = dict(schema_template=read('collect.schema')), data_dir='$HOME/$OB_NAME/data', cs_data_path='$HOME/$OB_NAME/data')"
+export OB_DEFINE="OBI(app_name='collect', tpl = dict(schema_template=read('collect.schema')), data_dir='$HOME/$OB_NAME/data', cs_data_path='$HOME/$OB_NAME/data')"
+
+export TXT2HTML_PATH=${__ScriptPath}/txt2html.py
+
+# hudson will use below, pay attention to !!!
+export LOG_URL=$BUILD_URL/collected_log_mytest
+export LOG_DIR=$WORKSPACE/collected_log_mytest
+
+export EXCLUDE_CASE="read_config,type_float,ps_2,rowkey_is_char,type_modify_time,join,delete_bug206717,order_by,master_ups_lost_causedby_switch_twice,revoke,user_pwd,desc,type_date,join_null,deadlock_causedby_ups_switch,create_user,update,ps_1,type_datetime,show,ps_3"
+export EXCLUDE_CASE_PS="read_config,build_in_func_test,type_float,ps_2,set,rowkey_is_char,join,delete_bug206717,select_without_from,binary_protocol,special_hook,union,order_by,master_ups_lost_causedby_switch_twice,revoke,user_pwd,stress,desc,type_date,join_null,deadlock_causedby_ups_switch,create_user,update,ps_1,type_datetime,join_bigid_bug206703,show,ps_3,many_columns"

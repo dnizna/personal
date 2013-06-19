@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/test-svnrepos/!svn/ver/235804/InfrastructureTest/ProjectObTest/scripts/oceanbase-0.4/cfgs
+END
+tpcc.cfg.sh
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/test-svnrepos/!svn/ver/230229/InfrastructureTest/ProjectObTest/scripts/oceanbase-0.4/cfgs/tpcc.cfg.sh
+END
+perf.cfg.sh
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/test-svnrepos/!svn/ver/232279/InfrastructureTest/ProjectObTest/scripts/oceanbase-0.4/cfgs/perf.cfg.sh
+END
+quicktest.cfg.sh
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/test-svnrepos/!svn/ver/230243/InfrastructureTest/ProjectObTest/scripts/oceanbase-0.4/cfgs/quicktest.cfg.sh
+END
+trxtest.cfg.sh
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/test-svnrepos/!svn/ver/232279/InfrastructureTest/ProjectObTest/scripts/oceanbase-0.4/cfgs/trxtest.cfg.sh
+END
+rpm.cfg.sh
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/test-svnrepos/!svn/ver/228302/InfrastructureTest/ProjectObTest/scripts/oceanbase-0.4/cfgs/rpm.cfg.sh
+END
+build.cfg.sh
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/test-svnrepos/!svn/ver/232277/InfrastructureTest/ProjectObTest/scripts/oceanbase-0.4/cfgs/build.cfg.sh
+END
+cppcheck.cfg.sh
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/test-svnrepos/!svn/ver/227550/InfrastructureTest/ProjectObTest/scripts/oceanbase-0.4/cfgs/cppcheck.cfg.sh
+END
+obsqltest.cfg.sh
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/test-svnrepos/!svn/ver/228117/InfrastructureTest/ProjectObTest/scripts/oceanbase-0.4/cfgs/obsqltest.cfg.sh
+END
+obtest.cfg.sh
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/test-svnrepos/!svn/ver/234201/InfrastructureTest/ProjectObTest/scripts/oceanbase-0.4/cfgs/obtest.cfg.sh
+END
+histest.cfg.sh
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/test-svnrepos/!svn/ver/233354/InfrastructureTest/ProjectObTest/scripts/oceanbase-0.4/cfgs/histest.cfg.sh
+END
+mysqltest.cfg.sh
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/test-svnrepos/!svn/ver/227242/InfrastructureTest/ProjectObTest/scripts/oceanbase-0.4/cfgs/mysqltest.cfg.sh
+END
+mytest.cfg.sh
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/test-svnrepos/!svn/ver/235804/InfrastructureTest/ProjectObTest/scripts/oceanbase-0.4/cfgs/mytest.cfg.sh
+END

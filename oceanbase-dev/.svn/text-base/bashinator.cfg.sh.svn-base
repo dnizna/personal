@@ -1,0 +1,126 @@
+## $Id: bashinator.cfg.sh,v 1.5 2009/10/08 11:36:17 wschlich Exp wschlich $
+## vim:ts=4:sw=4:tw=200:nu:ai:nowrap:
+
+##
+## bashinator settings
+##
+
+## -- bashinator basic settings --
+
+export __ScriptSubCommandLog=0 # log stdout and/or stderr of subcommands to a file -- default: 0
+export __ScriptSubCommandLogDir="/tmp" # default: /var/log
+export __ScriptLock=0 # create/check lockfile -- default: 0
+export __ScriptLockDir="/tmp" # default: /var/lock
+
+## -- bashinator message handling settings --
+
+## enable quiet operation: nothing is printed on stdout/stderr,
+## messages are only logged and/or mailed (if enabled).
+## overrides __Print* variables!
+## it should be possible to enable this by passing -q
+## as an argument to your own application script.
+export __MsgQuiet=0 # default: 0
+
+## timestamp format for the message functions,
+## will be passed to date(1).
+## default: "%Y-%m-%d %H:%M:%S %:z"
+export __MsgTimestampFormat="[%Y-%m-%d %H:%M:%S]" # with brackets
+#export __MsgTimestampFormat="[%Y-%m-%d %H:%M:%S %:z]" # with brackets
+#export __MsgTimestampFormat="[%Y-%m-%d %H:%M:%S.%N %:z]" # with brackets and nanoseconds
+
+## -- bashinator message printing settings --
+
+## enable/disable printing of messages by severity
+export __PrintDebug=1   # default: 0
+export __PrintInfo=1    # default: 1
+export __PrintNotice=1  # default: 1
+export __PrintWarning=1 # default: 1
+export __PrintErr=1     # default: 1
+export __PrintCrit=1    # default: 1
+export __PrintAlert=1   # default: 1
+export __PrintEmerg=1   # default: 1
+
+## enable/disable prefixing the messages to be printed with...
+##
+## ...their timestamp
+export __PrintPrefixTimestamp=1 # default: 1
+##
+## ...their severity
+export __PrintPrefixSeverity=1 # default: 1
+##
+## ...their source (file name, line number and function name)
+export __PrintPrefixSource=0 # default: 1
+
+## -- bashinator message logging settings --
+
+## enable/disable logging of messages by severity
+export __LogDebug=1   # default: 0
+export __LogInfo=1    # default: 1
+export __LogNotice=1  # default: 1
+export __LogWarning=1 # default: 1
+export __LogErr=1     # default: 1
+export __LogCrit=1    # default: 1
+export __LogAlert=1   # default: 1
+export __LogEmerg=1   # default: 1
+
+## enable/disable prefixing the messages to be logged with...
+##
+## ...their timestamp (ignored for syslog log target)
+export __LogPrefixTimestamp=1 # default: 1
+##
+## ...their severity (ignored for syslog log target)
+export __LogPrefixSeverity=0 # default: 1
+##
+## ...their source (file name, line number and function name)
+export __LogPrefixSource=0 # default: 1
+
+## log target configuration
+## supported targets (any comma separated combination of):
+## - "syslog:FACILITY"
+## - "file:TARGET-FILE"
+## - "file:TARGET-FILE:WRITE-MODE" (default WRITE-MODE: overwrite)
+## default: "syslog:user"
+export __LogTarget="syslog:user"
+#export __LogTarget="file:/var/log/${__ScriptName}.log"
+#export __LogTarget="file:/var/log/${__ScriptName}.log:append"
+#export __LogTarget="file:/var/log/${__ScriptName}.log:overwrite"
+#export __LogTarget="file:/var/log/${__ScriptName}.log:append,syslog:user"
+#export __LogTarget="file:/var/log/${__ScriptName}.log:overwrite,syslog:user"
+#export __LogTarget="file:/var/log/${__ScriptName}.log:append,file:/var/log/${__ScriptName}-current.log:overwrite"
+#export __LogTarget="file:/var/log/${__ScriptName}.$(date +"%Y%m%d-%H%M%S").log"
+
+## -- bashinator message mailing settings --
+
+## enable/disable mailing of messages by severity
+export __MailDebug=0   # default: 0
+export __MailInfo=0   # default: 1
+export __MailNotice=0  # default: 1
+export __MailWarning=0 # default: 1
+export __MailErr=0 # default: 1
+export __MailCrit=0    # default: 1
+export __MailAlert=0   # default: 1
+export __MailEmerg=0   # default: 1
+
+## enable/disable prefixing the messages to be mailed with...
+##
+## ...their timestamp
+export __MailPrefixTimestamp=1 # default: 1
+##
+## ...their severity
+export __MailPrefixSeverity=1 # default: 1
+##
+## ...their source (file name, line number and function name)
+export __MailPrefixSource=1 # default: 1
+
+## enable/disable appending the script subcommand log to the mail (if enabled)
+export __MailAppendScriptSubCommandLog=1 # default: 1
+
+## mail data configuration
+## default __MailFrom:         "${USER} <${USER}@${__ScriptHost}>"
+## default __MailEnvelopeFrom: "${USER}@${__ScriptHost}"
+## default __MailRecipient:    "${USER}@${__ScriptHost}"
+## default __MailSubject:      "Messages from ${__ScriptFile} running on ${__ScriptHost}"
+export __MailFrom="${USER} <${USER}@${__ScriptHost}>"
+export __MailEnvelopeFrom="${USER}@${__ScriptHost}"
+export __MailRecipient="${USER}@${__ScriptHost}"
+export __MailSubject="Messages from ${__ScriptFile} running on ${__ScriptHost}"
